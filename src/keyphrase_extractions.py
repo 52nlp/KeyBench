@@ -38,6 +38,7 @@ from graph_based_ranking import TextRankStrategy
 from graph_based_ranking import SingleRankStrategy
 from graph_based_ranking import TopicRankStrategy
 from graph_based_ranking import CompleteGraphStrategy
+from util import INISTFileRep
 from util import DEFTFileRep
 from util import InspecFileRep
 from util import PlainTextFileRep
@@ -104,6 +105,99 @@ INSPEC_CORPUS_REFS = path.join(INSPEC_CORPUS_DIR, "ref")
 INSPEC_CORPUS_TRAIN_DOCS = path.join(INSPEC_CORPUS_DIR, "train")
 INSPEC_CORPUS_DOCS_EXTENSION = ".abstr"
 
+INIST_CORPUS_DIR = path.join(CORPORA_DIR, "inist")
+INIST_CORPUS_DOCS_EXTENSION = ".xml"
+INIST_ARCHEOLOGIE_CORPUS_DOCS = path.join(INIST_CORPUS_DIR,
+                                          "archeologie",
+                                          "documents")
+INIST_ARCHEOLOGIE_CORPUS_TRAIN_DOCS = path.join(INIST_CORPUS_DIR,
+                                                "archeologie",
+                                                "train")
+INIST_ARCHEOLOGIE_CORPUS_TERM_SUITE_TERMINOLOGY = path.join(INIST_CORPUS_DIR,
+                                                            "archeologie",
+                                                            "term_suite_terminologie")
+INIST_ARCHEOLOGIE_CORPUS_TERM_SUITE_CLUSTERS = path.join(INIST_CORPUS_DIR,
+                                                         "archeologie",
+                                                         "term_suite_clusters")
+INIST_ARCHEOLOGIE_CORPUS_NEMESIS_NAMED_ENTITIES = path.join(INIST_CORPUS_DIR,
+                                                            "archeologie",
+                                                            "nemesis_named_entities")
+INIST_ARCHEOLOGIE_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
+                                          "archeologie",
+                                          "ref_uncontrolled")
+INIST_CHIMIE_CORPUS_DOCS = path.join(INIST_CORPUS_DIR,
+                                     "chimie",
+                                     "documents")
+INIST_CHIMIE_CORPUS_TRAIN_DOCS = path.join(INIST_CORPUS_DIR,
+                                           "chimie",
+                                           "train")
+INIST_CHIMIE_CORPUS_TERM_SUITE_TERMINOLOGY = path.join(INIST_CORPUS_DIR,
+                                                       "chimie",
+                                                       "term_suite_terminologie")
+INIST_CHIMIE_CORPUS_TERM_SUITE_CLUSTERS = path.join(INIST_CORPUS_DIR,
+                                                    "chimie",
+                                                    "term_suite_clusters")
+INIST_CHIMIE_CORPUS_NEMESIS_NAMED_ENTITIES = path.join(INIST_CORPUS_DIR,
+                                                       "chimie",
+                                                       "nemesis_named_entities")
+INIST_CHIMIE_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
+                                          "chimie",
+                                          "ref_uncontrolled")
+INIST_LINGUISTIQUE_CORPUS_DOCS = path.join(INIST_CORPUS_DIR,
+                                           "linguistique",
+                                           "documents")
+INIST_LINGUISTIQUE_CORPUS_TRAIN_DOCS = path.join(INIST_CORPUS_DIR,
+                                                 "linguistique",
+                                                 "train")
+INIST_LINGUISTIQUE_CORPUS_TERM_SUITE_TERMINOLOGY = path.join(INIST_CORPUS_DIR,
+                                                             "linguistique",
+                                                             "term_suite_terminologie")
+INIST_LINGUISTIQUE_CORPUS_TERM_SUITE_CLUSTERS = path.join(INIST_CORPUS_DIR,
+                                                          "linguistique",
+                                                          "term_suite_clusters")
+INIST_LINGUISTIQUE_CORPUS_NEMESIS_NAMED_ENTITIES = path.join(INIST_CORPUS_DIR,
+                                                             "linguistique",
+                                                             "nemesis_named_entities")
+INIST_LINGUISTIQUE_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
+                                          "linguistique",
+                                          "ref_uncontrolled")
+INIST_PSYCHOLOGIE_CORPUS_DOCS = path.join(INIST_CORPUS_DIR,
+                                          "psychologie",
+                                          "documents")
+INIST_PSYCHOLOGIE_CORPUS_TRAIN_DOCS = path.join(INIST_CORPUS_DIR,
+                                                "psychologie",
+                                                "train")
+INIST_PSYCHOLOGIE_CORPUS_TERM_SUITE_TERMINOLOGY = path.join(INIST_CORPUS_DIR,
+                                                            "psychologie",
+                                                            "term_suite_terminologie")
+INIST_PSYCHOLOGIE_CORPUS_TERM_SUITE_CLUSTERS = path.join(INIST_CORPUS_DIR,
+                                                         "psychologie",
+                                                         "term_suite_clusters")
+INIST_PSYCHOLOGIE_CORPUS_NEMESIS_NAMED_ENTITIES = path.join(INIST_CORPUS_DIR,
+                                                            "psychologie",
+                                                            "nemesis_named_entities")
+INIST_PSYCHOLOGIE_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
+                                          "psychologie",
+                                          "ref_uncontrolled")
+INIST_SCIENCES_DE_L_INFORMATION_CORPUS_DOCS = path.join(INIST_CORPUS_DIR,
+                                                        "sciences_de_l_information",
+                                                        "documents")
+INIST_SCIENCES_DE_L_INFORMATION_CORPUS_TRAIN_DOCS = path.join(INIST_CORPUS_DIR,
+                                                              "sciences_de_l_information",
+                                                              "train")
+INIST_SCIENCES_DE_L_INFORMATION_CORPUS_TERM_SUITE_TERMINOLOGY = path.join(INIST_CORPUS_DIR,
+                                                                          "sciences_de_l_information",
+                                                                          "term_suite_terminologie")
+INIST_SCIENCES_DE_L_INFORMATION_CORPUS_TERM_SUITE_CLUSTERS = path.join(INIST_CORPUS_DIR,
+                                                                       "sciences_de_l_information",
+                                                                       "term_suite_clusters")
+INIST_SCIENCES_DE_L_INFORMATION_CORPUS_NEMESIS_NAMED_ENTITIES = path.join(INIST_CORPUS_DIR,
+                                                                          "sciences_de_l_information",
+                                                                          "nemesis_named_entities")
+INIST_SCIENCES_DE_L_INFORMATION_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
+                                                        "sciences_de_l_information",
+                                                        "ref_uncontrolled")
+
 FRENCH_LA = "fr"
 FRENCH_STOP_WORDS_FILEPATH = path.join(CORPORA_DIR, "french_unine_stop_words")
 ENGLISH_LA = "en"
@@ -125,6 +219,11 @@ WIKINEWS_CO = "wikinews"
 SEMEVAL_CO = "semeval"
 DUC_CO = "duc"
 INSPEC_CO = "inspec"
+ARCHEOLOGIE_CO = "inist_archeologie"
+CHIMIE_CO = "inist_chimie"
+LINGUISTIQUE_CO = "inist_linguistique"
+PSYCHOLOGIE_CO = "inist_psychologie"
+SCIENCES_DE_L_INFORMATION_CO = "inist_sciences_de_l_information"
 
 # method names
 TFIDF_ME = "tfidf"
@@ -620,6 +719,121 @@ def main(argv):
                     clarit_special_patterns = english_clarit_special_patterns
                     clarit_impossible_patterns = english_clarit_impossible_patterns
                     pos_boundaries = english_pos_boundaries
+                  elif corpus == ARCHEOLOGIE_CO:
+                    docs = INIST_ARCHEOLOGIE_CORPUS_DOCS
+                    ext = INIST_CORPUS_DOCS_EXTENSION
+                    term_suite_terms = INIST_ARCHEOLOGIE_CORPUS_TERM_SUITE_TERMINOLOGY
+                    term_suite_clusters = INIST_ARCHEOLOGIE_CORPUS_TERM_SUITE_CLUSTERS
+                    nemesis_named_entities = extract_named_entities(INIST_ARCHEOLOGIE_CORPUS_NEMESIS_NAMED_ENTITIES)
+                    proper_noun_patterns = french_proper_noun_patterns
+                    train_docs = INIST_ARCHEOLOGIE_CORPUS_DOCS
+                    refs = INIST_ARCHEOLOGIE_CORPUS_REFS
+                    stop_words = extract_stop_words(FRENCH_STOP_WORDS_FILEPATH)
+                    stemmer = FrenchStemmer()
+                    ref_stemmer = stemmer
+                    tokenize = bonsai_tokenization
+                    pre_processor = FrenchPreProcessor("%s_pre_processor"%corpus,
+                                                       LAZY_PRE_PROCESSING,
+                                                       RUNS_DIR,
+                                                       True,
+                                                       INISTFileRep())
+                    language = FRENCH_LA
+                    np_chunk_rules = french_np_chunk_rules
+                    lnp_patterns = french_lnp_patterns
+                    na_patterns = french_na_patterns
+                    is_adjr_function = is_french_adjr
+                  elif corpus == CHIMIE_CO:
+                    docs = INIST_CHIMIE_CORPUS_DOCS
+                    ext = INIST_CORPUS_DOCS_EXTENSION
+                    term_suite_terms = INIST_CHIMIE_CORPUS_TERM_SUITE_TERMINOLOGY
+                    term_suite_clusters = INIST_CHIMIE_CORPUS_TERM_SUITE_CLUSTERS
+                    nemesis_named_entities = extract_named_entities(INIST_CHIMIE_CORPUS_NEMESIS_NAMED_ENTITIES)
+                    proper_noun_patterns = french_proper_noun_patterns
+                    train_docs = INIST_CHIMIE_CORPUS_DOCS
+                    refs = INIST_CHIMIE_CORPUS_REFS
+                    stop_words = extract_stop_words(FRENCH_STOP_WORDS_FILEPATH)
+                    stemmer = FrenchStemmer()
+                    ref_stemmer = stemmer
+                    tokenize = bonsai_tokenization
+                    pre_processor = FrenchPreProcessor("%s_pre_processor"%corpus,
+                                                       LAZY_PRE_PROCESSING,
+                                                       RUNS_DIR,
+                                                       True,
+                                                       INISTFileRep())
+                    language = FRENCH_LA
+                    np_chunk_rules = french_np_chunk_rules
+                    lnp_patterns = french_lnp_patterns
+                    na_patterns = french_na_patterns
+                    is_adjr_function = is_french_adjr
+                  elif corpus == LINGUISTIQUE_CO:
+                    docs = INIST_LINGUISTIQUE_CORPUS_DOCS
+                    ext = INIST_CORPUS_DOCS_EXTENSION
+                    term_suite_terms = INIST_LINGUISTIQUE_CORPUS_TERM_SUITE_TERMINOLOGY
+                    term_suite_clusters = INIST_LINGUISTIQUE_CORPUS_TERM_SUITE_CLUSTERS
+                    nemesis_named_entities = extract_named_entities(INIST_LINGUISTIQUE_CORPUS_NEMESIS_NAMED_ENTITIES)
+                    proper_noun_patterns = french_proper_noun_patterns
+                    train_docs = INIST_LINGUISTIQUE_CORPUS_DOCS
+                    refs = INIST_LINGUISTIQUE_CORPUS_REFS
+                    stop_words = extract_stop_words(FRENCH_STOP_WORDS_FILEPATH)
+                    stemmer = FrenchStemmer()
+                    ref_stemmer = stemmer
+                    tokenize = bonsai_tokenization
+                    pre_processor = FrenchPreProcessor("%s_pre_processor"%corpus,
+                                                       LAZY_PRE_PROCESSING,
+                                                       RUNS_DIR,
+                                                       True,
+                                                       INISTFileRep())
+                    language = FRENCH_LA
+                    np_chunk_rules = french_np_chunk_rules
+                    lnp_patterns = french_lnp_patterns
+                    na_patterns = french_na_patterns
+                    is_adjr_function = is_french_adjr
+                  elif corpus == PSYCHOLOGIE_CO:
+                    docs = INIST_PSYCHOLOGIE_CORPUS_DOCS
+                    ext = INIST_CORPUS_DOCS_EXTENSION
+                    term_suite_terms = INIST_PSYCHOLOGIE_CORPUS_TERM_SUITE_TERMINOLOGY
+                    term_suite_clusters = INIST_PSYCHOLOGIE_CORPUS_TERM_SUITE_CLUSTERS
+                    nemesis_named_entities = extract_named_entities(INIST_PSYCHOLOGIE_CORPUS_NEMESIS_NAMED_ENTITIES)
+                    proper_noun_patterns = french_proper_noun_patterns
+                    train_docs = INIST_PSYCHOLOGIE_CORPUS_DOCS
+                    refs = INIST_PSYCHOLOGIE_CORPUS_REFS
+                    stop_words = extract_stop_words(FRENCH_STOP_WORDS_FILEPATH)
+                    stemmer = FrenchStemmer()
+                    ref_stemmer = stemmer
+                    tokenize = bonsai_tokenization
+                    pre_processor = FrenchPreProcessor("%s_pre_processor"%corpus,
+                                                       LAZY_PRE_PROCESSING,
+                                                       RUNS_DIR,
+                                                       True,
+                                                       INISTFileRep())
+                    language = FRENCH_LA
+                    np_chunk_rules = french_np_chunk_rules
+                    lnp_patterns = french_lnp_patterns
+                    na_patterns = french_na_patterns
+                    is_adjr_function = is_french_adjr
+                  elif corpus == SCIENCES_DE_L_INFORMATION_CO:
+                    docs = INIST_SCIENCES_DE_L_INFORMATION_CORPUS_DOCS
+                    ext = INIST_CORPUS_DOCS_EXTENSION
+                    term_suite_terms = INIST_SCIENCES_DE_L_INFORMATION_CORPUS_TERM_SUITE_TERMINOLOGY
+                    term_suite_clusters = INIST_SCIENCES_DE_L_INFORMATION_CORPUS_TERM_SUITE_CLUSTERS
+                    nemesis_named_entities = extract_named_entities(INIST_SCIENCES_DE_L_INFORMATION_CORPUS_NEMESIS_NAMED_ENTITIES)
+                    proper_noun_patterns = french_proper_noun_patterns
+                    train_docs = INIST_SCIENCES_DE_L_INFORMATION_CORPUS_DOCS
+                    refs = INIST_SCIENCES_DE_L_INFORMATION_CORPUS_REFS
+                    stop_words = extract_stop_words(FRENCH_STOP_WORDS_FILEPATH)
+                    stemmer = FrenchStemmer()
+                    ref_stemmer = stemmer
+                    tokenize = bonsai_tokenization
+                    pre_processor = FrenchPreProcessor("%s_pre_processor"%corpus,
+                                                       LAZY_PRE_PROCESSING,
+                                                       RUNS_DIR,
+                                                       True,
+                                                       INISTFileRep())
+                    language = FRENCH_LA
+                    np_chunk_rules = french_np_chunk_rules
+                    lnp_patterns = french_lnp_patterns
+                    na_patterns = french_na_patterns
+                    is_adjr_function = is_french_adjr
 
           for candidate in CANDIDATES_RU:
             for cluster in CLUSTERING_RU:

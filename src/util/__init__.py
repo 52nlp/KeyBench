@@ -11,6 +11,7 @@ from semeval2010 import SemEvalFileRep
 from srilm import ngram_model_logprobs
 from wikinews2012 import WikiNewsFileRep
 from plain_text import PlainTextFileRep
+from inist import INISTFileRep
 from wonef_adjr import french_adjr
 from wonef_adjr import french_stemmed_adjr
 from wonef_adjr import french_adjr_stem_ending_counts
