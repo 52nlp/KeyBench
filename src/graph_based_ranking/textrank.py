@@ -206,7 +206,7 @@ class TextRank(object):
     for identifier in token_ids:
       in_edges[identifier] = {}
       weighted_degrees[identifier] = 0.0
-      scores[identifier] = 0.0
+      scores[identifier] = 0.0 # FIXME should not work properly (float side effect ???)
 
     ##### Graph creation #######################################################
     for out_token_id in token_ids:

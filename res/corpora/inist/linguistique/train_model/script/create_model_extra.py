@@ -23,6 +23,7 @@ if len(sys.argv) == 3:
 
   # number of documents where each ngram, keyphrase and (ngram, keyphrase) pair
   # appears
+  nb_documents = 0.0
   ngram_counts = {}
   keyphrase_counts = {}
   pair_counts = {}
@@ -40,6 +41,8 @@ if len(sys.argv) == 3:
         raw_text += " " + xml_file.abstract()
       if xml_file.content() != "":
         raw_text += " " + xml_file.content()
+
+      nb_documents += 1.0
 
       # tokenize document
       sentence_tokenizer = data.load('tokenizers/punkt/french.pickle')
@@ -106,7 +109,7 @@ if len(sys.argv) == 3:
 
   #-- serialize counts ---------------------------------------------------------
   model = open(output, "w")
-  pickle.dump((ngram_counts, keyphrase_counts, pair_counts), model)
+  pickle.dump((nb_documents, ngram_counts, keyphrase_counts, pair_counts), model)
   model.close()
 
   print "## ngram_counts ######################################################"
