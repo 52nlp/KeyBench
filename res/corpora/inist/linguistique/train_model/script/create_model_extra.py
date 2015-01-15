@@ -112,16 +112,16 @@ if len(sys.argv) == 3:
   pickle.dump((nb_documents, ngram_counts, keyphrase_counts, pair_counts), model)
   model.close()
 
-  print "## ngram_counts ######################################################"
-  for ngram, count in ngram_counts.items():
-    print "%s\t\t\t\t%d"%(ngram, count)
-  print "## keyphrase_counts ##################################################"
-  for keyphrase, count in keyphrase_counts.items():
-    print "%s\t\t\t\t%d"%(keyphrase, count)
-  print "## pair_counts #######################################################"
-  for ngram in pair_counts:
-    for keyphrase in pair_counts[ngram]:
-      print "(%s, %s)\t\t\t\t%d"%(ngram, keyphrase, pair_counts[ngram][keyphrase])
+  #print "## ngram_counts ######################################################"
+  #for ngram, count in ngram_counts.items():
+  #  print "%s\t\t\t\t%d"%(ngram, count)
+  #print "## keyphrase_counts ##################################################"
+  #for keyphrase, count in keyphrase_counts.items():
+  #  print "%s\t\t\t\t%d"%(keyphrase, count)
+  #print "## pair_counts #######################################################"
+  #for ngram in pair_counts:
+  #  for keyphrase in pair_counts[ngram]:
+  #    print "(%s, %s)\t\t\t\t%d"%(ngram, keyphrase, pair_counts[ngram][keyphrase])
 else:
   print "Usage: %s <train_directory> <output_filepath>"%(sys.argv[0])
 
