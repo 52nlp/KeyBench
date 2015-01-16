@@ -882,7 +882,7 @@ def main(argv):
                                             True,
                                             domain_graph_filepath,
                                             domain_model_filepath,
-                                            False)
+                                            True)
                     else:
                       if method == KEA_ME:
                         kea_train_dir = path.join(RUNS_DIR, "kea_models")
