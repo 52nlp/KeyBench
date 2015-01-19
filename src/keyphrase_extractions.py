@@ -120,7 +120,7 @@ INIST_LINGUISTIQUE_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
 INIST_LINGUISTIQUE_CORPUS_TRAIN_GRAPH = path.join(INIST_CORPUS_DIR,
                                                   "linguistique",
                                                   "train_model",
-                                                  "model_intra_uni.pickle")
+                                                  "model_intra_bi.pickle")
 INIST_LINGUISTIQUE_CORPUS_TRAIN_MODEL = path.join(INIST_CORPUS_DIR,
                                                   "linguistique",
                                                   "train_model",
@@ -157,7 +157,7 @@ COMPLETERANK_ME = "completerank"
 TOPICRANK_S_ME = "topicrank_s"
 TOPICRANK_ME = "topicrank"
 KEA_ME = "kea"
-TOPICRANK_PP_ME = "topicrank_pp"
+TOPICRANK_PP_ME = "topicrank_pp_test_01"
 
 # candidate names
 ST_FILTERED_NGRAM_CA = "st_filtered_ngram"
@@ -882,7 +882,8 @@ def main(argv):
                                             True,
                                             domain_graph_filepath,
                                             domain_model_filepath,
-                                            False)
+                                            False,
+                                            5)
                     else:
                       if method == KEA_ME:
                         kea_train_dir = path.join(RUNS_DIR, "kea_models")

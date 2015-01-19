@@ -55,8 +55,10 @@ if len(sys.argv) == 2:
 
       p_k1 = keyphrase_counts[keyphrase1] / len(train_refs.train_references)
       p_k2_given_k1 = pair_counts[keyphrase1][keyphrase2] / keyphrase_counts[keyphrase1]
+      p_k1_k2 = p_k1 * p_k2_given_k1
 
-      graph.add_edge(keyphrase1, keyphrase2, {"type": "intra", "weight": p_k2_given_k1})
+      # edge: <->
+      graph.add_edge(keyphrase1, keyphrase2, {"type": "intra", "weight": p_k1_k2})
 
   #networkx.write_dot(graph, "debug_model_intra_bi.dot")
 

@@ -21,8 +21,10 @@ class TopicRankPPRanker(RankerC):
                                       # keyphrase_counts and (ngram, keyphrase)
                                       # pair counts
                oriented,
+               controlled_keyphrase_number=float("inf"),
                convergence_threshold=0.001,
-               recomendation_weight=0.85,
+               # TODO test multiple values
+               recomendation_weight=0.5, # equi-probability
                max_iterations=1000000):
     """
     """
@@ -43,6 +45,7 @@ class TopicRankPPRanker(RankerC):
     self._domain_graph = domain_graph
     self._domain_model = domain_model
     self._oriented = oriented
+    self._controlled_keyphrase_number = controlled_keyphrase_number
     self._convergence_threshold = convergence_threshold
     self._lambda = recomendation_weight
     self._max_iterations = max_iterations
@@ -111,7 +114,9 @@ class TopicRankPPRanker(RankerC):
                            {"type": "intra", "weight": weight})
       # domain connections
       for keyphrase in keyphrase_counts:
-        weight_prod = 1.0
+        weight_min = 1.0
+        weight_max = 0.0
+        weight_pro = 1.0
         weight_avg = 0.0
 
         for tagged_candidate in clusters[topic_id]:
@@ -123,9 +128,12 @@ class TopicRankPPRanker(RankerC):
             p_keyphrase_given_candidate = ngram_keyphrase_pair_counts[candidate][keyphrase] / ngram_counts[candidate]
             p_candidate_keyphrase = p_candidate * p_keyphrase_given_candidate
 
-            weight_prod *= p_candidate_keyphrase
+            weight_min = min(weight_min, p_candidate_keyphrase)
+            weight_max = max(weight_max, p_candidate_keyphrase)
+            weight_pro *= p_candidate_keyphrase
             weight_avg += p_candidate_keyphrase / float(len(clusters[topic_id]))
-            weight = weight_prod
+            # TODO test miltiple vaues
+            weight = weight_max
 
         if weight != 0.0:
           if not graph.has_node(topic_id_1):
@@ -141,13 +149,10 @@ class TopicRankPPRanker(RankerC):
     #-- random walk ------------------------------------------------------------
     stabilized = False
     nb_iterations = 0
-    scores = {}
     in_edge_indexing = {}
     out_edge_indexing = {}
-
-    # initialization
-    for node in graph.nodes():
-      scores[node] = 1.0 # (unlike TextRank) cannot be initialized at 0.0
+    out_sum_indexing = {}
+    scores = {}
 
     # in and out edge indexing for faster processing
     for node in graph.nodes():
@@ -157,9 +162,22 @@ class TopicRankPPRanker(RankerC):
         out_edge_indexing[node] = {"intra": [], "extra": []}
 
       for source, target, data in graph.in_edges(node, data=True):
-        in_edge_indexing[node][data["type"]].append((target, data["weight"]))
+        in_edge_indexing[node][data["type"]].append((source, data["weight"]))
       for source, target, data in graph.out_edges(node, data=True):
         out_edge_indexing[node][data["type"]].append((target, data["weight"]))
+
+    # initialization
+    for node in graph.nodes():
+      # TODO try with scores[node] = 0.0 when data["type"] == "keyphrase"
+      scores[node] = 1.0
+
+      out_sum_indexing[node] = {}
+      for edge_type in out_edge_indexing[node]:
+        if edge_type not in out_sum_indexing[node]:
+          out_sum_indexing[node][edge_type] = 0.0
+
+        for target, weight in out_edge_indexing[node][edge_type]:
+          out_sum_indexing[node][edge_type] += weight
 
     while not stabilized and nb_iterations < self._max_iterations:
       stabilized = True
@@ -173,21 +191,25 @@ class TopicRankPPRanker(RankerC):
         extra_recommendation_sum = 0.0
 
         # compute the intra-recommendation
-        for target1, weight1 in in_edge_indexing[node]["intra"]:
-          out_sum = 0.0
+        for source, weight1 in in_edge_indexing[node]["intra"]:
+          out_sum = out_sum_indexing[source]["intra"]
+          #out_sum = 0.0
 
-          for target2, weight2 in out_edge_indexing[target1]["intra"]:
-            out_sum += weight2
+          #for target, weight2 in out_edge_indexing[source]["intra"]:
+          #  out_sum += weight2
 
-          intra_recommendation_sum += (weight1 * previous_score) / out_sum
+          intra_recommendation_sum += (weight1 * previous_scores[source]) \
+                                      / out_sum
         # compute the extra-recommendation
-        for target1, weight1 in in_edge_indexing[node]["extra"]:
-          out_sum = 0.0
+        for source, weight1 in in_edge_indexing[node]["extra"]:
+          out_sum = out_sum_indexing[source]["extra"]
+          #out_sum = 0.0
 
-          for target2, weight2 in out_edge_indexing[target1]["extra"]:
-            out_sum += weight2
+          #for target, weight2 in out_edge_indexing[source]["extra"]:
+          #  out_sum += weight2
 
-          extra_recommendation_sum += (weight1 * previous_score) / out_sum
+          extra_recommendation_sum += (weight1 * previous_scores[source]) \
+                                      / out_sum
 
         new_score = ((1.0 - self._lambda) * extra_recommendation_sum) \
                     + (self._lambda * intra_recommendation_sum)
@@ -202,29 +224,64 @@ class TopicRankPPRanker(RankerC):
 
     ##-- post-processing -------------------------------------------------------
     ranking_results = {}
-    text = " ".join(pre_processed_file.full_text_words())
+    tagged_text = " ".join(pre_processed_file.full_text_words())
+    sorted_nodes = sorted(graph.nodes(data=True),
+                          key=lambda (n, d): (len(d["type"]), scores[n]),
+                          reverse=True)
+    score_max = max(scores[n] for n, d in sorted_nodes)
 
-    for node, node_data in graph.nodes(data=True):
-      # add reference keyphrases
-      if node_data["type"] == "keyphrase":
+    # - treat keyphrases first
+    # - add the best score to every keyphrase so that candidates are always
+    #   ranked below
+    for node, node_data in sorted_nodes:
+      # add reference keyphrases if it has a score above 0.0
+      if node_data["type"] == "keyphrase" \
+         and scores[node] > 0.0 \
+         and len(ranking_results) < self._controlled_keyphrase_number:
         ranking_results[node] = scores[node]
-      # put only one candidate per topic
+        
+        # ensure to rank keyphrases first when a subset must be extracted
+        if self._controlled_keyphrase_number != float("inf"):
+          ranking_results[node] += score_max
+
+      # put only a few candidates per topic
       if node_data["type"] == "topic":
         cluster = sorted(clusters[node],
                          key=lambda c: len(c.split(" ")),
                          reverse=True)
-        best_candidate = cluster[0]
-        best_first_position = text.find(best_candidate)
+        found_in_domain = False
 
-        # find the first appearing candidate
+        # extract (every) candidate already used as keyphrase
         for candidate in cluster:
-          first_position = text.find(candidate)
+          untagged_candidate = " ".join(wt.rsplit(pre_processed_file.tag_separator(), 1)[0] for wt in candidate.split(" "))
 
-          if first_position < best_first_position:
-            best_candidate = candidate
-            best_first_position = first_position
+          if untagged_candidate in keyphrase_counts \
+             and untagged_candidate not in ranking_results: # check if the
+                                                            # keyphrase has
+                                                            # already been added
+            found_in_domain = True
 
-        ranking_results[best_candidate] = scores[node]
+            ranking_results[candidate] = scores[node]
+
+        # if no candidate is already used, extract novelty (only one candidate)
+        if not found_in_domain:
+          best_candidate = ""
+          best_first_position = float("inf")
+
+          # find the first appearing candidate
+          for candidate in cluster:
+            untagged_candidate = " ".join(wt.rsplit(pre_processed_file.tag_separator(), 1)[0] for wt in candidate.split(" "))
+            first_position = tagged_text.find(candidate)
+
+            if first_position < best_first_position \
+               and untagged_candidate not in ranking_results: # exclude already
+                                                              # extracted
+                                                              # keyphrases
+              best_candidate = candidate
+              best_first_position = first_position
+
+          if best_candidate != "":
+            ranking_results[best_candidate] = scores[node]
 
     return ranking_results
 
