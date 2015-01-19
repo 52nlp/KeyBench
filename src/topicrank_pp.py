@@ -180,6 +180,7 @@ class TopicRankPPRanker(RankerC):
           out_sum_indexing[node][edge_type] += weight
 
     while not stabilized and nb_iterations < self._max_iterations:
+      print nb_iterations
       stabilized = True
       previous_scores = scores.copy()
 
