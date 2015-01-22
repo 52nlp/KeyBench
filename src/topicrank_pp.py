@@ -24,7 +24,7 @@ class TopicRankPPRanker(RankerC):
                controlled_keyphrase_number=float("inf"),
                convergence_threshold=0.001,
                # TODO test multiple values
-               recomendation_weight=0.5, # equi-probability
+               recomendation_weight=0.5, # 0.5 = equi-probability
                max_iterations=1000000):
     """
     """
@@ -132,7 +132,7 @@ class TopicRankPPRanker(RankerC):
             weight_max = max(weight_max, p_candidate_keyphrase)
             weight_pro *= p_candidate_keyphrase
             weight_avg += p_candidate_keyphrase / float(len(clusters[topic_id]))
-            # TODO test miltiple vaues
+            # TODO test multiple values
             weight = weight_max
 
         if weight != 0.0:
@@ -167,8 +167,7 @@ class TopicRankPPRanker(RankerC):
         out_edge_indexing[node][data["type"]].append((target, data["weight"]))
 
     # initialization
-    for node in graph.nodes():
-      # TODO try with scores[node] = 0.0 when data["type"] == "keyphrase"
+    for node, data in graph.nodes(data=True):
       scores[node] = 1.0
 
       out_sum_indexing[node] = {}
@@ -180,7 +179,6 @@ class TopicRankPPRanker(RankerC):
           out_sum_indexing[node][edge_type] += weight
 
     while not stabilized and nb_iterations < self._max_iterations:
-      print nb_iterations
       stabilized = True
       previous_scores = scores.copy()
 
@@ -226,6 +224,7 @@ class TopicRankPPRanker(RankerC):
     ##-- post-processing -------------------------------------------------------
     ranking_results = {}
     tagged_text = " ".join(pre_processed_file.full_text_words())
+    untagged_text = " ".join(wt.rsplit(pre_processed_file.tag_separator(), 1)[0] for wt in pre_processed_file.full_text_words())
     sorted_nodes = sorted(graph.nodes(data=True),
                           key=lambda (n, d): (len(d["type"]), scores[n]),
                           reverse=True)
@@ -238,7 +237,9 @@ class TopicRankPPRanker(RankerC):
       # add reference keyphrases if it has a score above 0.0
       if node_data["type"] == "keyphrase" \
          and scores[node] > 0.0 \
-         and len(ranking_results) < self._controlled_keyphrase_number:
+         and len(ranking_results) < self._controlled_keyphrase_number \
+         and (self._controlled_keyphrase_number != float("inf") \
+              or not untagged_text.count(node) > 0):
         ranking_results[node] = scores[node]
         
         # ensure to rank keyphrases first when a subset must be extracted

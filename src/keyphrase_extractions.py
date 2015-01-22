@@ -157,7 +157,7 @@ COMPLETERANK_ME = "completerank"
 TOPICRANK_S_ME = "topicrank_s"
 TOPICRANK_ME = "topicrank"
 KEA_ME = "kea"
-TOPICRANK_PP_ME = "topicrank_pp_test_01"
+TOPICRANK_PP_ME = "topicrank_pp_test_08"
 
 # candidate names
 ST_FILTERED_NGRAM_CA = "st_filtered_ngram"
