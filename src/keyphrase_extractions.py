@@ -111,12 +111,18 @@ INIST_CORPUS_DOCS_EXTENSION = ".xml"
 INIST_LINGUISTIQUE_CORPUS_DOCS = path.join(INIST_CORPUS_DIR,
                                            "linguistique",
                                            "test")
+#INIST_LINGUISTIQUE_CORPUS_DOCS = path.join(INIST_CORPUS_DIR,
+#                                           "linguistique",
+#                                           "train")
 INIST_LINGUISTIQUE_CORPUS_TRAIN_DOCS = path.join(INIST_CORPUS_DIR,
                                                  "linguistique",
                                                  "train")
 INIST_LINGUISTIQUE_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
                                           "linguistique",
                                           "ref")
+#INIST_LINGUISTIQUE_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
+#                                          "linguistique",
+#                                          "ref_train")
 INIST_LINGUISTIQUE_CORPUS_TRAIN_GRAPH = path.join(INIST_CORPUS_DIR,
                                                   "linguistique",
                                                   "train_model",
@@ -134,8 +140,8 @@ ENGLISH_STOP_WORDS_FILEPATH = path.join(CORPORA_DIR, "english_unine_stop_words")
 ##### execution configurations #################################################
 
 LAZY_PRE_PROCESSING = True
-LAZY_CANDIDATE_EXTRACTION = False
-LAZY_CANDIDATE_CLUSTERING = False
+LAZY_CANDIDATE_EXTRACTION = True
+LAZY_CANDIDATE_CLUSTERING = True
 LAZY_RANKING = False
 LAZY_SELECTION = False
 
@@ -157,7 +163,7 @@ COMPLETERANK_ME = "completerank"
 TOPICRANK_S_ME = "topicrank_s"
 TOPICRANK_ME = "topicrank"
 KEA_ME = "kea"
-TOPICRANK_PP_ME = "topicrank_pp_test_08"
+TOPICRANK_PP_ME = "topicrank_pp_train"
 
 # candidate names
 ST_FILTERED_NGRAM_CA = "st_filtered_ngram"
@@ -189,8 +195,8 @@ TEXTRANK_SE = "textrank"
 
 CORPORA_RU = [LINGUISTIQUE_CO]
 METHODS_RU = [TOPICRANK_PP_ME]
-NUMBERS_RU = [10]
-LENGTHS_RU = [0]
+NUMBERS_RU = [6]
+LENGTHS_RU = [95]
 CANDIDATES_RU = [LONGEST_NOUN_PHRASE_CA]
 CLUSTERING_RU = [HIERARCHICAL_CLUSTER_CC]
 SCORINGS_RU = [WEIGHT_SC]
@@ -883,7 +889,8 @@ def main(argv):
                                             domain_graph_filepath,
                                             domain_model_filepath,
                                             False,
-                                            5)
+                                            number, # HACK: #ControlledKeyphrase
+                                            recomendation_weight=float(length)/100.0) # HACK: lambda
                     else:
                       if method == KEA_ME:
                         kea_train_dir = path.join(RUNS_DIR, "kea_models")

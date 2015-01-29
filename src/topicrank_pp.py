@@ -43,7 +43,7 @@ class TopicRankPPRanker(RankerC):
     domain_model_file.close()
 
     self._domain_graph = domain_graph
-    self._domain_model = domain_model
+    self._domain_nb_documents, self._domain_ngram_counts, self._domain_keyphrase_counts, self._domain_ngram_keyphrase_pair_counts= domain_model
     self._oriented = oriented
     self._controlled_keyphrase_number = controlled_keyphrase_number
     self._convergence_threshold = convergence_threshold
@@ -83,8 +83,6 @@ class TopicRankPPRanker(RankerC):
           topic_indexing[topic_id].append(sentence_index)
 
     #-- graph creation ---------------------------------------------------------
-    nb_documents, ngram_counts, keyphrase_counts, ngram_keyphrase_pair_counts = self._domain_model
-
     # add document information within the domain graph
     for topic_id_1 in topic_indexing:
       count_1 = float(len(topic_indexing[topic_id_1]))
@@ -113,7 +111,7 @@ class TopicRankPPRanker(RankerC):
                            topic_id_2,
                            {"type": "intra", "weight": weight})
       # domain connections
-      for keyphrase in keyphrase_counts:
+      for keyphrase in self._domain_keyphrase_counts:
         weight_min = 1.0
         weight_max = 0.0
         weight_pro = 1.0
@@ -122,10 +120,10 @@ class TopicRankPPRanker(RankerC):
         for tagged_candidate in clusters[topic_id]:
           candidate = " ".join(wt.rsplit(pre_processed_file.tag_separator(), 1)[0] for wt in tagged_candidate.split(" "))
 
-          if candidate in ngram_keyphrase_pair_counts \
-             and keyphrase in ngram_keyphrase_pair_counts[candidate]:
-            p_candidate = ngram_counts[candidate] / nb_documents
-            p_keyphrase_given_candidate = ngram_keyphrase_pair_counts[candidate][keyphrase] / ngram_counts[candidate]
+          if candidate in self._domain_ngram_keyphrase_pair_counts \
+             and keyphrase in self._domain_ngram_keyphrase_pair_counts[candidate]:
+            p_candidate = self._domain_ngram_counts[candidate] / self._domain_nb_documents
+            p_keyphrase_given_candidate = self._domain_ngram_keyphrase_pair_counts[candidate][keyphrase] / self._domain_ngram_counts[candidate]
             p_candidate_keyphrase = p_candidate * p_keyphrase_given_candidate
 
             weight_min = min(weight_min, p_candidate_keyphrase)
@@ -257,7 +255,7 @@ class TopicRankPPRanker(RankerC):
         for candidate in cluster:
           untagged_candidate = " ".join(wt.rsplit(pre_processed_file.tag_separator(), 1)[0] for wt in candidate.split(" "))
 
-          if untagged_candidate in keyphrase_counts \
+          if untagged_candidate in self._domain_keyphrase_counts \
              and untagged_candidate not in ranking_results: # check if the
                                                             # keyphrase has
                                                             # already been added
