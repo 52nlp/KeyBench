@@ -68,8 +68,8 @@ if len(sys.argv) == 3:
         words = sentence.split()
         ascii_words = ascii_sentences[sentence_index].split()
 
-        for n in range(1, len(words) + 1):
-          for i in range(n, len(words) + 1):
+        for n in range(1, 7):#len(words) + 1):
+          for i in range(n, 7):#len(words) + 1):
             start = i - n
             end = i
             ngram = " ".join(words[start:end])

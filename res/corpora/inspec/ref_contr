@@ -1,0 +1,500 @@
+1930.abstr	object-oriented programming
+1931.abstr	bayes methods; decision theory; fuzzy logic; inference mechanisms
+1932.abstr	computer games; matrix algebra
+1933.abstr	fault trees; probability; system recovery
+1934.abstr	conjugate gradient methods; finite element analysis; optimal control
+1935.abstr	fuzzy logic; fuzzy set theory
+1936.abstr	boolean functions; logic design
+1937.abstr	extrapolation; mean square error methods
+1938.abstr	matrix algebra; polynomials
+1939.abstr	linear programming
+193.abstr	bibliographies; library automation
+1940.abstr	error correction codes; optimisation
+1941.abstr	programming
+1942.abstr	channel allocation; fading channels; internet; intersymbol interference; mobile computing; mobile radio; ofdm modulation; video coding; visual communication
+1943.abstr	computer network management; hypermedia markup languages; internet; mobile computing; mobile radio
+1944.abstr	certification; contracts; government data processing; internet; public key cryptography; purchasing; systems re-engineering
+1945.abstr	automatic optical inspection; cameras; ccd image sensors; crack detection; manipulators; mobile robots; structural engineering computing
+1946.abstr	building management systems; distributed object management; integrated software; internet; intranets; lan interconnection; open systems; protocols
+1947.abstr	building management systems; information systems; user modelling
+1948.abstr	dosimetry; geographic information systems; medical computing
+1949.abstr	biological tissues; biomedical mri; calibration; computerised tomography; graphical user interfaces; lung; monte carlo methods; physics computing; radioisotopes
+194.abstr	academic libraries; library automation
+1950.abstr	inverse problems; piezoelectric actuators; piezoelectric materials; polynomials
+1951.abstr	ground states; magneto-optical effects; optical squeezing; quantum computing
+1952.abstr	encoding; exchange interactions (electron); quantum computing; semiconductor quantum dots
+1953.abstr	cinematography; marketing; percolation; phase transformations; socio-economic effects
+1954.abstr	economics; finance; fluctuations; gaussian noise; investment; white noise
+1955.abstr	biocybernetics; cellular automata
+1956.abstr	nonlinear dynamical systems; phase transformations; road traffic
+1957.abstr	cellular automata; fluctuations; lattice theory; probability; zoology
+1958.abstr	fluctuations; integration; statistical mechanics; stochastic processes; stock markets
+1959.abstr	economics; game theory; quantum statistical mechanics; quantum theory
+195.abstr	music; special libraries; vocabulary
+1960.abstr	cellular automata; iterative methods; nonlinear dynamical systems; self-organised criticality; transport processes; transportation
+1961.abstr	road traffic
+1962.abstr	economics; fluctuations; game theory; nonlinear dynamical systems; oscillations; statistical mechanics
+1963.abstr	corporate modelling; economics; fluctuations; nonlinear dynamical systems; probability; statistical mechanics
+1964.abstr	entropy; fluctuations; forecasting theory; foreign exchange trading; markov processes; nonlinear dynamical systems; probability; time series
+1965.abstr	chaos; economic cybernetics; stock markets
+1966.abstr	economics; fluctuations; foreign exchange trading; nonlinear dynamical systems; statistical mechanics; time series
+1967.abstr	economics; fluctuations; probability; statistical mechanics; stock markets
+1968.abstr	bound states; fluctuations; optical squeezing; phase control; quantum theory; two-photon processes
+1969.abstr	boltzmann equation; flow simulation; multiphase flow; nonlinear differential equations; poisson equation; road traffic
+196.abstr	associative processing; learning (artificial intelligence); neural nets
+1970.abstr	catering industry; electronic commerce; information resources; internet; marketing data processing
+1971.abstr	hotel industry; information resources; internet; marketing data processing; multimedia computing
+1972.abstr	costing; electronic commerce; information resources; internet; travel industry
+1973.abstr	computational complexity; feature extraction; image registration; object recognition
+1974.abstr	data compression; digital signal processing chips; image coding; real-time systems; transform coding; tree data structures; video codecs; video coding; wavelet transforms
+1975.abstr	convolution; edge detection; image processing; image segmentation; image texture; matrix algebra
+1976.abstr	adaptive signal processing; edge detection; image enhancement; image resolution; image restoration; interference suppression; wavelet transforms
+1977.abstr	edge detection; image motion analysis; motion compensation; motion estimation; tracking; video signal processing
+1978.abstr	data compression; image coding; image representation; transform coding
+1979.abstr	adaptive filters; data compression; edge detection; image enhancement; matched filters; noise; probability; wavelet transforms
+197.abstr	bayes methods; pattern classification
+1980.abstr	biomedical mri; decorrelation; discrete wavelet transforms; image coding; medical image processing
+1981.abstr	control system synthesis; machine control; optimal control; power system control; power system stability; synchronous generators; turbines
+1982.abstr	coils; compensation; earthing; power distribution faults; power distribution protection; power system analysis computing; software packages
+1983.abstr	circuit simulation; electricity supply industry; power electronics; power system simulation
+1984.abstr	control system analysis computing; electric generators; electric machine analysis computing; machine control; machine testing; machine theory; parameter estimation; power station control; power system stability
+1985.abstr	electricity supply industry; management information systems; power engineering computing
+1986.abstr	control facilities; energy management systems; load regulation; power system control; power system security
+1987.abstr	computer viruses
+1988.abstr	management information systems
+1989.abstr	risk management; security of data
+198.abstr	chemioception; neural nets
+1990.abstr	information networks; optical cables; optical fibre networks; water treatment
+1991.abstr	autoregressive processes; copy protection; data compression; data encapsulation; discrete cosine transforms; image coding; statistical analysis; wavelet transforms
+1992.abstr	copy protection; data encapsulation; feature extraction; image coding; image recognition; mesh generation; transforms
+1993.abstr	cameras; correlation methods; image colour analysis; interpolation; optical filters
+1994.abstr	correlation methods; image colour analysis; neural nets
+1995.abstr	correlation methods; image colour analysis; neural nets
+1996.abstr	image colour analysis; rendering (computer graphics)
+1997.abstr	controllability; eigenvalues and eigenfunctions; elasticity; fourier analysis; hilbert spaces; partial differential equations; young's modulus
+1998.abstr	compensation; pneumatic control equipment; process control; stiction; valves
+1999.abstr	compensation; h/sup infinity / control; performance index; robust control; sensitivity; three-term control
+199.abstr	brain models; dendrites; hearing; neural nets
+2000.abstr	control system synthesis; digital control; multivariable control systems; optimal control; predictive control; sampled data systems; state-space methods
+2001.abstr	computational complexity; observers
+2002.abstr	fault diagnosis; identification; least squares approximations; principal component analysis; process monitoring
+2003.abstr	adaptive control; backpropagation; fuzzy control; identification; molten carbonate fuel cells; radial basis function networks; temperature control
+2004.abstr	haptic interfaces; image segmentation; medical image processing; virtual reality
+2005.abstr	computerised tomography; data visualisation; image registration; medical image processing; orthopaedics; surgery
+2006.abstr	cancer; computerised tomography; data visualisation; image recognition; knowledge representation; lung; medical expert systems; medical image processing; tumours
+2007.abstr	computer animation; finite element analysis; image reconstruction; image representation; image segmentation; kidney; medical image processing; software packages; splines (mathematics)
+2008.abstr	computer animation; data visualisation; information resources; internet; medical computing; rendering (computer graphics); solid modelling; visual databases
+2009.abstr	cutting; digital simulation; haptic interfaces; medical computing; real-time systems; rendering (computer graphics); surgery
+200.abstr	neural net architecture; neural nets; unsupervised learning
+2010.abstr	biomedical mri; image classification; image sampling; image segmentation; medical image processing; neural nets
+2011.abstr	light interferometry; optical information processing; speckle; stability
+2012.abstr	deformation; image segmentation; light interferometry; moire fringes; nondestructive testing; spatial filters; strain measurement
+2013.abstr	error statistics; image resolution; military computing; military systems; motion estimation; optical tracking; random noise; shot noise; target tracking
+2014.abstr	adaptive optics; colorimetry; edge detection; image colour analysis; optical noise; optical saturation; spatial filters
+2015.abstr	ccd image sensors; fourier transform optics; invariance; object recognition; optical correlation; spatial filters; spatial light modulators; surface topography measurement
+2016.abstr	automatic optical inspection; calibration; cameras; computer vision; image sensors; lenses; radon transforms
+2017.abstr	lenses; micropositioning; optical focusing; optical microscopes
+2018.abstr	calibration; crystal growth from melt; geometry; robot vision; semiconductor growth
+2019.abstr	brightness; image colour analysis; image recognition; image segmentation; image sensors; image sequences; road vehicles; transportation
+201.abstr	computer vision; motion estimation
+2020.abstr	aberrations; beam steering; deconvolution; image restoration; liquid crystal devices; nematic liquid crystals; optical arrays; reflectivity; spatial filters
+2021.abstr	adders; content-addressable storage; light coherence; optical storage; symbolic substitution
+2022.abstr	ccd image sensors; image reconstruction; image resolution; light valves; liquid crystal displays; microlenses; optical arrays
+2023.abstr	convolution; image coding; image resolution; light diffraction; masks; optical focusing
+2024.abstr	fourier transform optics; image segmentation; inverse problems
+2025.abstr	ccd image sensors; data acquisition; eigenvalues and eigenfunctions; image colour analysis; optical filters; optical tuning; reflectivity
+2026.abstr	gaussian noise; image restoration; iterative methods; least mean squares methods; smoothing methods
+2027.abstr	dynamic programming; image matching; image sequences; motion estimation; robot vision; vectors
+2028.abstr	image recognition; image registration; optical correlation; smoothing methods; spatial filters; spatial light modulators
+2029.abstr	block codes; data compression; image coding; quantisation (signal)
+202.abstr	computational geometry; computer vision; object recognition
+2030.abstr	electronic speckle pattern interferometry; holographic interferometry; image reconstruction; image resolution; integral equations; light diffraction; measurement errors
+2031.abstr	bayes methods; image segmentation; maximum entropy methods; probability
+2032.abstr	copy protection; data compression; discrete cosine transforms; fuzzy logic; image coding; inference mechanisms
+2033.abstr	encoding; fourier transform optics; image coding; image colour analysis; image recognition; optical correlation
+2035.abstr	chebyshev approximation; operations research
+2036.abstr	medical administrative data processing
+2037.abstr	bayes methods; estimation theory; probability; statistical analysis
+2038.abstr	mathematical programming
+2039.abstr	heat conduction; inverse problems; partial differential equations
+203.abstr	image morphing; rendering (computer graphics)
+2040.abstr	computability; inverse problems; ion exchange; mathematical programming
+2041.abstr	computational fluid dynamics; mathematics computing; message passing; multiprocessing systems
+2042.abstr	flow instability; flow simulation; hybrid simulation; magnetohydrodynamics; plasma instability; stability
+2043.abstr	computational complexity; computer architecture; electrical engineering computing; electromagnetism; finite difference time-domain analysis; iterative methods; matrix decomposition; matrix multiplication
+2044.abstr	data visualisation; electromagnetic fields; image processing; indoor radio; radiowave propagation; ray tracing; telecommunication computing; tree data structures
+2045.abstr	dynamic programming; games of skill
+2046.abstr	educational courses
+2047.abstr	pert; spreadsheet programs
+2048.abstr	business data processing; computer aided instruction; discrete event simulation; object-oriented programming
+2049.abstr	decision theory; management science; operations research; optimisation; probability
+204.abstr	active vision; calibration; image motion analysis; image sequences; motion estimation
+2050.abstr	computer aided instruction; management education
+2051.abstr	decision theory; dynamic programming; educational courses; operations research; probability; statistical analysis
+2052.abstr	computer graphics; educational computing; management science; statistical analysis
+2053.abstr	business data processing; computer science education; decision support systems; management science; spreadsheet programs
+2054.abstr	educational courses; management science; modelling
+2055.abstr	educational courses; management science; professional aspects
+2056.abstr	academic libraries; library automation; research libraries
+2057.abstr	costing; publishing
+2058.abstr	costing; publishing
+2059.abstr	library automation; special libraries
+205.abstr	computer vision; image reconstruction
+2060.abstr	academic libraries; library automation
+2061.abstr	academic libraries; library automation
+2062.abstr	library automation; literature; publishing
+2063.abstr	psychology
+2064.abstr	psychology
+2065.abstr	psychology
+2066.abstr	costing; dp industry; electronics industry; production control; technology transfer
+2067.abstr	decision theory; health care; social sciences
+2068.abstr	demography; employment; simulation; social sciences
+2069.abstr	management; management science; set theory
+206.abstr	electronic publishing; hypermedia; information resources
+2070.abstr	corporate modelling; industrial property
+207.abstr	electronic publishing; information resources; natural languages
+2081.abstr	boundary-elements methods; cooling; iterative methods; moulding; optimisation; plastics industry; process control; sensitivity analysis; solid modelling
+2082.abstr	management; manufacturing resources planning; production control; stock control
+2083.abstr	cad/cam; concurrent engineering; finite element analysis; rapid prototyping (industrial); solid modelling
+2084.abstr	computer aided production planning; flexible manufacturing systems; production control
+2085.abstr	computer aided production planning; decision support systems; flexible manufacturing systems; fuzzy logic; production control; real-time systems
+2086.abstr	cad; costing; fuzzy logic; knowledge based systems; knowledge representation; machining; moulding; object-oriented programming; product development; solid modelling
+2087.abstr	aluminium alloys; cutting; fractals; friction; geometry; machine tools; machining
+2088.abstr	machining; numerical control; rapid prototyping (industrial)
+2089.abstr	battery storage plants; power system interconnection; power system stability; power transmission control; power transmission lines
+208.abstr	electronic publishing; hypermedia; information resources; internet
+2090.abstr	laser feedback; optical logic; optical modulation; semiconductor optical amplifiers
+2091.abstr	computerised tomography; digital simulation; image reconstruction; iterative methods; medical image processing; x-ray absorption; x-ray scattering
+2092.abstr	computerised tomography; diagnostic radiography; dosimetry; image registration; medical image processing; positron emission tomography; radiation therapy
+2093.abstr	bar codes; data acquisition; food processing industry; mobile computing; production control
+2094.abstr	decision theory; inference mechanisms; probability
+2095.abstr	bifurcation; biochemistry; catalysis; differential equations; proteins; reaction kinetics theory; stability
+2096.abstr	agriculture; modelling; parameter estimation; rain; weather forecasting
+2097.abstr	computer networks; graph theory; network analysis; trees (mathematics)
+2098.abstr	boundary-value problems; moulding; nonlinear systems
+2099.abstr	corporate modelling; mathematical programming; operations research
+209.abstr	electronic publishing; hypermedia; information resources; information retrieval; internet
+20.abstr	adaptive systems; linear systems; robust control; state feedback; time-varying systems; uncertain systems
+2100.abstr	advertising; nonlinear programming
+2101.abstr	optical design techniques; optical logic; optical modulation; semiconductor optical amplifiers
+2102.abstr	financial data processing; human factors; information resources; internet; psychology; real estate data processing; social aspects of automation
+2103.abstr	electronic money; internet; personal computing; psychology; social aspects of automation
+2104.abstr	electronic mail; home working; human factors; intranets; personnel; psychology; social aspects of automation
+2105.abstr	human factors; information resources; internet; politics; psychology; social aspects of automation
+2106.abstr	electronic mail; human factors; information resources; internet; psychology; social aspects of automation
+2107.abstr	electronic mail; groupware; human factors; internet; psychology; social aspects of automation; user interfaces
+2108.abstr	demography; information resources; internet; psychology
+2109.abstr	data privacy; information resources; internet; psychology; security of data
+210.abstr	graphical user interfaces; information systems; police data processing
+2110.abstr	human factors; internet; psychology; user interfaces
+2111.abstr	biological techniques; biology computing; fluorescence; image reconstruction; image resolution; optical focusing; optical microscopy; organic compounds; photosynthesis
+2112.abstr	brownian motion; filtering theory; fractals; measurement; random noise; signal processing; statistical analysis
+2113.abstr	convex programming; differential equations; set theory; variable structure systems
+2114.abstr	boilers; fault tolerance; graph theory; large-scale systems; ships
+2115.abstr	heat transfer; internal combustion engines
+2116.abstr	distributed processing; optimisation; resource allocation
+2117.abstr	computational complexity; fault tolerant computing; hypercube networks
+2118.abstr	decision theory; functions; game theory
+2119.abstr	matrix algebra; optimisation; transportation; trees (mathematics)
+211.abstr	business data processing; client-server systems; mobile computing; user interfaces
+2120.abstr	decision theory; game theory; linear systems
+2121.abstr	chemical technology; fuzzy set theory; large-scale systems; mathematical programming; uncertain systems
+2122.abstr	adaptive control; aerospace control; closed loop systems; discrete systems; fuzzy control; graph theory; space vehicles
+2123.abstr	controllability; discrete time systems; linear systems; multidimensional systems; polynomials; vectors
+2124.abstr	discrete systems; geometry; linear systems; polynomials; stability
+2125.abstr	asymptotic stability; differential equations; probability; stochastic systems
+2126.abstr	boundary-value problems; nonlinear control systems; time optimal control
+2127.abstr	differential equations; matrix algebra; polynomials
+2128.abstr	functional equations; matrix algebra; optimal control; reachability analysis; set theory; variational techniques
+2129.abstr	exponential distribution; integration
+212.abstr	electricity supply industry; human resource management; knowledge engineering
+2130.abstr	control system analysis; controllability; discrete systems; linear systems; minimisation; synchronisation; uncertain systems
+2131.abstr	district heating; fault diagnosis
+2132.abstr	computerised control; fault tolerant computing; graph theory
+2133.abstr	data communication; multiprocessor interconnection networks
+2134.abstr	circuit analysis computing; circuit complexity; linearisation techniques; multivalued logic circuits; polynomials; vlsi
+2135.abstr	functional equations; identification; set theory
+2136.abstr	computational complexity; graph theory; optimisation; set theory
+2137.abstr	closed loop systems; continuous time systems; differential equations; discrete time systems; feedback; linear systems; pulse frequency modulation; stability
+2138.abstr	discrete systems; optimal control; reachability analysis; set theory
+2139.abstr	normal distribution; set theory; state estimation; stochastic systems; vectors
+213.abstr	fuzzy set theory; information technology; statistical analysis; technological forecasting
+2140.abstr	functional equations; game theory; matrix algebra; set theory
+2141.abstr	control system synthesis; linear systems; multivariable systems; observers; reduced order systems; transfer function matrices
+2142.abstr	linear systems; spectral analysis
+2143.abstr	quantum computing
+2144.abstr	data privacy; security of data; social aspects of automation
+2145.abstr	business data processing; computer network management; security of data
+2146.abstr	computer network management; computer science education; information systems; internet; microcomputers; risk management; security of data; standards; telecommunication security
+2147.abstr	computer graphics; computer viruses; data compression; file organisation
+2148.abstr	dp management; information systems; information technology; security of data; standards
+2149.abstr	dp management; security of data
+214.abstr	dp industry; parallel processing
+2150.abstr	air conditioning; building management systems; installation; power supplies to apparatus; project management; security
+2151.abstr	access control; building management systems; computer networks
+2152.abstr	business data processing; engineering computing; groupware; management information systems
+2153.abstr	industrial robots; materials handling; postal services; sorting
+2154.abstr	computerised monitoring; condition monitoring; industrial robots; maintenance engineering; reliability; scheduling
+2156.abstr	assembling; automobile industry; industrial robots
+2157.abstr	bending; industrial robots; machining; robot programming
+2158.abstr	automobile industry; industrial control; industrial robots
+2159.abstr	manufacturing industries; production control; real-time systems
+215.abstr	information technology; investment; mathematical programming
+2160.abstr	automobile industry; manufacturing industries; process control
+2161.abstr	formal logic
+2162.abstr	boolean algebra; formal logic
+2163.abstr	information technology; legislation; professional aspects
+2164.abstr	electronic commerce; legislation; standards
+2165.abstr	legislation
+2166.abstr	copyright; information resources; legislation
+2167.abstr	computer software; government policies; legislation; patents
+2168.abstr	computer crime; government policies; information resources; legislation
+2169.abstr	government data processing; legislation
+216.abstr	curve fitting; electromagnetic wave polarisation; electromagnetic wave scattering; error analysis; interpolation; matrix algebra; microwave propagation; millimetre wave propagation; rain; telecommunication computing; tropospheric electromagnetic wave propagation
+2170.abstr	electronic mail; law administration
+2171.abstr	cd-roms; law administration; records management; storage management
+2172.abstr	electronic data interchange; information systems; real estate data processing; standards
+2173.abstr	authorisation; cryptography; electronic mail; law administration; telecommunication security
+2174.abstr	data privacy; electronic mail; information resources
+2175.abstr	information resources; law administration
+2176.abstr	dp management; information resources; internet; legislation
+2177.abstr	biographies; health care; history; medical image processing; medical information systems; user interfaces
+2178.abstr	biomedical engineering; biotechnology; data privacy; genetics; health care; industrial property; medical computing; medical information systems; medicine; molecular biophysics; pacemakers; records management
+2179.abstr	health care; internet; medical computing; medical information systems; medicine
+217.abstr	accreditation; certification; computer network management; personnel
+2180.abstr	electronic data interchange; health care; medical administrative data processing; medical computing; page description languages
+2181.abstr	diseases; health care; medical computing
+2182.abstr	dp management; information technology; social aspects of automation
+2183.abstr	dp management; knowledge based systems; personnel; social aspects of automation
+2184.abstr	dp management; information systems; social aspects of automation
+2185.abstr	commerce; decision support systems; systems re-engineering
+2186.abstr	catalysts; chemical structure; chemistry computing; combinatorial mathematics; computational geometry; design of experiments; materials preparation; monte carlo methods; random processes; zeolites
+2187.abstr	compensation; control system synthesis; discrete time systems; intelligent control; machine control; machine testing; neurocontrollers; permanent magnet motors; servomotors; state estimation; synchronous motor drives; uncertain systems; variable structure systems
+2188.abstr	electric admittance; feedback; hvdc power transmission; invertors; linearisation techniques; load flow; nonlinear control systems; power system control; rectifying circuits
+2189.abstr	computer science education; mobile computing
+218.abstr	computer network management; digital storage
+2190.abstr	internet; mobile computing; protocols; standards
+2191.abstr	mobile computing; portable computers; speech recognition; speech-based user interfaces
+2192.abstr	distributed object management; internet; mobile computing; software agents
+2193.abstr	distributed processing; groupware; management information systems; user interfaces
+2194.abstr	database management systems; information services; mobile computing
+2195.abstr	business data processing; data privacy; mobile computing
+2196.abstr	groupware; teleconferencing
+2197.abstr	client-server systems; mobile computing; quality of service
+2198.abstr	distributed object management; mobile computing; portable computers
+2199.abstr	mobile computing; position measurement; sensors
+219.abstr	authorisation; computer network management; security of data
+21.abstr	state feedback; variable structure systems
+2200.abstr	biology computing; laboratory techniques
+220.abstr	dp management
+223.abstr	broadcasting; intranets
+224.abstr	application program interfaces; dp management; java
+225.abstr	closed circuit television; hotel industry; security; surveillance
+226.abstr	computer viruses; electronic mail; security of data
+227.abstr	information theory; quantum communication; quantum theory; special relativity
+228.abstr	biochemistry; biocontrol; biological techniques; dna; electrochemical analysis; electrophoresis; physical instrumentation control; separation
+229.abstr	health care
+22.abstr	conveyors; semiconductor device manufacture
+230.abstr	buyer's guides; publishing; software packages
+231.abstr	publishing
+232.abstr	academic libraries; digital libraries; educational computing; information resources; internet; meta data
+233.abstr	academic libraries; contracts; electronic publishing; full-text databases; information resources; library automation
+234.abstr	academic libraries; contracts; electronic publishing; information resources; library automation
+235.abstr	academic libraries; electronic publishing; library automation; purchasing; research libraries
+236.abstr	academic libraries; electronic publishing; library automation; research libraries; scientific information systems
+237.abstr	libraries; purchasing
+238.abstr	digital libraries; electronic publishing; meta data; open systems; protocols
+239.abstr	electronic publishing; hypermedia markup languages; standards
+23.abstr	acoustic parametric devices; acoustic wave absorption; active noise control; antireflection coatings; boundary-value problems
+240.abstr	electronic publishing; mathematics computing; research libraries
+241.abstr	academic libraries; economics; electronic publishing; research libraries
+242.abstr	academic libraries; digital libraries; electronic publishing
+243.abstr	academic libraries; biology computing; electronic publishing; environmental science computing; full-text databases; scientific information systems
+244.abstr	academic libraries; electronic publishing; research libraries
+245.abstr	calibration; errors; factory automation; learning automata; machine tools; mechanical engineering computing; microcomputer applications; pattern classification
+246.abstr	adaptive systems; computational complexity; distributed algorithms; shared memory systems
+247.abstr	computer networks; concurrency control; distributed algorithms; message passing; processor scheduling; resource allocation; shared memory systems
+248.abstr	distributed processing; protocols; self-adjusting systems; theorem proving
+249.abstr	distributed algorithms; message passing; randomised algorithms; theorem proving
+24.abstr	function approximation; fuzzy logic; fuzzy set theory; fuzzy systems; modelling; tuning
+250.abstr	business data processing; data mining; internet; project management; software reviews
+251.abstr	authoring systems; graphical user interfaces; groupware; information resources; internet; software reviews
+252.abstr	internet; system monitoring; system recovery
+253.abstr	electronic publishing; handicapped aids; hypermedia markup languages; information resources; multimedia communication; user interfaces
+254.abstr	file servers; information resources; internet; monitoring; performance evaluation
+255.abstr	internet; program testing; user interfaces
+256.abstr	internet; program debugging; software tools
+257.abstr	c language; object-oriented programming; security
+258.abstr	digital libraries; information retrieval systems; meta data; records management; standards
+259.abstr	information resources; information retrieval systems; professional aspects; records management; standards
+25.abstr	fuzzy logic; fuzzy set theory; identification; modelling; unsupervised learning
+260.abstr	digital libraries; information retrieval systems; records management; standards
+261.abstr	information retrieval systems; politics; records management; service industries
+262.abstr	information retrieval systems; page description languages; personnel; records management
+263.abstr	education; information resources; information retrieval systems; records management; teaching
+264.abstr	information retrieval systems; professional aspects; records management
+265.abstr	chemistry computing; fuzzy logic; fuzzy set theory; molecular configurations; pattern recognition; physics computing
+266.abstr	fuzzy logic; fuzzy set theory; hydrogen bonds; intermolecular mechanics; molecular biophysics; pattern classification; pattern recognition; potential energy functions
+267.abstr	chemistry computing; orbital calculations; parallel algorithms; physics computing; transforms
+268.abstr	biology computing; macromolecules; molecular biophysics; molecular configurations; proteins
+269.abstr	biology computing; chemical structure; chemistry computing; genetic algorithms
+26.abstr	learning (artificial intelligence); matrix algebra; minimisation
+270.abstr	biology computing; chemical structure; chemistry computing; equivalence classes; medical computing; medical information systems; molecular configurations; organic compounds; pharmaceutical industry; scientific information systems; special libraries
+271.abstr	chemical structure; chemistry computing; generalisation (artificial intelligence); learning (artificial intelligence); neural nets; uncertainty handling
+272.abstr	chemistry computing; entropy; genetic algorithms; organic compounds; scientific information systems; very large databases
+273.abstr	biology computing; chemistry computing; medical computing; medical information systems; molecular biophysics; pharmaceutical industry; scientific information systems
+274.abstr	binding energy; biochemistry; chemistry computing; combinatorial mathematics; hydrogen bonds; molecular biophysics; polarisability; statistical analysis; topology; van der waals forces
+275.abstr	chromatography; combinatorial mathematics; correlation methods; indo calculations; iterative methods; organic compounds; oscillator strengths; solvent effects; spectrochemical analysis; spectrophotometry; spectroscopy computing; ultraviolet spectroscopy
+276.abstr	association; chemical equilibrium; chemistry computing; graph theory; organic compounds; solvent effects
+277.abstr	chemistry computing; combinatorial mathematics; organic compounds; physical chemistry; probability; set theory; solubility
+278.abstr	biochemistry; bonds (chemical); chemistry computing; chirality; combinatorial mathematics; isomerism; molecular biophysics; topology; vocabulary
+279.abstr	educational technology; electronic mail; teaching; teleconferencing
+27.abstr	finite automata; formal languages; fuzzy logic
+280.abstr	educational computing; internet; teaching
+281.abstr	educational computing; educational courses; human factors; information resources; natural sciences computing; teacher training; teaching; user interfaces
+282.abstr	biology computing; ecology; educational computing; information retrieval; internet; teaching
+283.abstr	courseware; hypermedia; interactive systems; natural sciences computing; teaching
+284.abstr	authoring systems; computer literacy; courseware; multimedia computing; social sciences computing; teacher training; teaching
+285.abstr	educational computing; ergonomics; human factors; multimedia computing; user interfaces
+286.abstr	medical signal processing; parameter estimation; patient diagnosis; principal component analysis; raman spectroscopy; skin; software packages
+287.abstr	frequency response; inductors; losses; loudspeakers; network parameters; parameter estimation; spice
+288.abstr	combinatorial mathematics; computational complexity; cryptography; entropy; galois fields; random processes; sparse matrices; statistical mechanics
+289.abstr	brain models; neural nets; neurophysiology; nonlinear dynamical systems; random noise; stochastic processes
+28.abstr	forecasting theory; fuzzy logic; fuzzy set theory; fuzzy systems; iterative methods; probability; time series; uncertain systems
+290.abstr	compensation; control system synthesis; disc drives; discrete time systems; hard discs; microactuators; pole assignment; position control; self-adjusting systems
+291.abstr	dipole coupling; liquid crystal devices; molecular electronics; nematic liquid crystals; nuclear magnetic resonance; quantum computing; spin systems
+292.abstr	acoustic field; acoustic transducers; acoustic wave absorption; acoustic wave transmission; active noise control; force feedback; piezoelectric transducers; robust control; vibration control
+293.abstr	active noise control; architectural acoustics; noise pollution
+294.abstr	academic libraries; cataloguing; environmental engineering
+295.abstr	academic libraries; management; research libraries; standards
+296.abstr	information resources; law administration
+297.abstr	academic libraries; internet; library automation
+298.abstr	employment; information science; library automation; personnel; salaries
+299.abstr	academic libraries; interlibrary loan
+29.abstr	backpropagation; fuzzy logic; fuzzy neural nets; genetic algorithms; identification; inference mechanisms; modelling
+2.abstr	optical fibre networks; telecommunication
+300.abstr	academic libraries; library automation; network computers
+301.abstr	academic libraries
+302.abstr	internet; linguistics; psychology; search engines
+303.abstr	linguistics; psychology
+304.abstr	behavioural sciences computing; character sets; information resources
+305.abstr	computer displays; psychology; video signal processing
+306.abstr	interactive devices; keyboards; microcomputer applications; psychology
+307.abstr	behavioural sciences computing
+308.abstr	courseware; java; public domain software
+309.abstr	authoring languages; educational computing; information resources; internet; java; public domain software; student experiments
+30.abstr	function approximation; fuzzy logic; fuzzy set theory; modelling; parameter estimation
+310.abstr	educational computing; information resources; interactive systems; internet; java; psychology; student experiments
+311.abstr	electronic publishing; hypermedia; information resources
+312.abstr	computer aided instruction; electronic publishing; exhibitions; humanities; information resources
+313.abstr	computer science education; educational courses; information science
+314.abstr	certification; hypermedia; information resources
+315.abstr	internet; public libraries
+316.abstr	citation analysis
+317.abstr	internet; linear programming; relevance feedback; search engines
+318.abstr	deterministic algorithms; optimisation; stock control
+319.abstr	design of experiments; inspection; optimisation; probability; reliability; stochastic processes
+31.abstr	adaptive control; aerospace engines; asymptotic stability; fuzzy control; neurocontrollers; nonlinear control systems; radial basis function networks; time-varying systems
+320.abstr	life cycle costing; probability; retailing
+321.abstr	apple computers; basic; graphs; operating systems (computers); psychology; user interfaces
+322.abstr	computer testing; data acquisition; operating systems (computers); performance evaluation; program testing; real-time systems
+323.abstr	computer animation; information resources; internet; psychology
+324.abstr	educational computing; hypermedia markup languages; information resources; internet; probability; psychology
+325.abstr	courseware; information resources; internet; public domain software
+326.abstr	authoring languages; educational computing; information resources; internet; java; probability
+327.abstr	computer aided instruction; psychology
+328.abstr	computer aided instruction; internet; psychology
+329.abstr	computer aided instruction; data integrity; information resources; information retrieval; user interfaces
+32.abstr	computational complexity; fuzzy logic; fuzzy set theory; pattern recognition; vectors
+330.abstr	authorisation; message authentication
+331.abstr	data visualisation; psychology; rendering (computer graphics)
+332.abstr	psychology; statistical analysis
+333.abstr	courseware; internet; psychology; student experiments; teaching
+334.abstr	cable television; internet; subscriber loops; twisted pair cables
+335.abstr	dp industry; ibm computers; research initiatives
+338.abstr	dp management
+339.abstr	geophysical signal processing; geophysical techniques; geophysics computing; image registration; remote sensing; terrain mapping; wavelet transforms
+33.abstr	adaptive control; feedback; fuzzy control; multivariable control systems; optimal control; process control
+340.abstr	computer based training; digital simulation; machine testing; nuclear engineering computing; nuclear power stations; turbogenerators; vibration measurement
+341.abstr	scheduling; sport
+342.abstr	health care; heuristic programming; integer programming; resource allocation; surgery
+343.abstr	government policies; product development; research initiatives
+344.abstr	feedback; management education; management science; operations research
+345.abstr	information systems; management science; operations research
+346.abstr	administrative data processing; information resources; internet; linear programming; sport
+347.abstr	management science; marketing data processing; software engineering; systems analysis
+348.abstr	cryptography
+349.abstr	multimedia systems; quality of service
+34.abstr	closed loop systems; control system synthesis; genetic algorithms; robust control; three-term control; transfer function matrices
+350.abstr	hypercube networks; network routing
+351.abstr	processor scheduling
+352.abstr	computational complexity; magnetic disc storage; random-access storage; resource allocation; storage allocation; tree searching; video on demand; video servers
+353.abstr	computational complexity; string matching
+354.abstr	fault tolerant computing; graph theory; hypercube networks
+355.abstr	cryptography
+356.abstr	gaussian noise; information theory; probability; quantum communication; quantum theory
+357.abstr	banach spaces; fuzzy set theory
+358.abstr	fuzzy set theory
+359.abstr	approximation theory; mathematical operators; rough set theory
+35.abstr	bond graphs; fault diagnosis; genetic algorithms; search problems
+360.abstr	decision theory; error analysis
+361.abstr	set theory; topology
+362.abstr	database indexing; tree data structures
+363.abstr	control systems; control theory; delays; planning (artificial intelligence); software agents
+364.abstr	constraint handling; distributed programming; multi-agent systems; prolog
+365.abstr	geophysics computing; learning (artificial intelligence); oceanography; self-organising feature maps
+366.abstr	cost-benefit analysis; decision support systems; investment; railways; town and country planning; transportation
+367.abstr	computational linguistics; information retrieval; natural language interfaces; speech-based user interfaces; travel industry
+368.abstr	artificial life; automata theory; learning (artificial intelligence)
+369.abstr	automobile industry; industrial property; internet; legislation
+36.abstr	extrusion; moulding; predictive control; robust control; temperature control; three-term control; tuning
+370.abstr	internet; legislation
+371.abstr	internet; public administration
+373.abstr	handwriting recognition; notebook computers
+374.abstr	aircraft control; linear quadratic control; lyapunov methods; military aircraft; missile guidance; stability
+375.abstr	adaptive signal processing; electromagnetic interference; matrix algebra; parallel algorithms; parameter estimation; tracking
+376.abstr	bayes methods; markov processes; probability; state estimation; target tracking
+377.abstr	functions; pulse compression; radar computing; radar signal processing; sparse matrices
+378.abstr	linear synchronous motors; motion control; permanent magnet motors; servomotors; variable structure systems
+379.abstr	backpropagation; feedforward; fuzzy control; neurocontrollers; photovoltaic power systems; solar cell arrays; tracking
+37.abstr	control system synthesis; frequency-domain synthesis; h/sup infinity / control; stability; suboptimal control; three-term control; time-domain synthesis
+380.abstr	feedforward; fuzzy control; model reference adaptive control systems; reluctance motor drives; velocity control
+381.abstr	fuzzy control; invertors; microcontrollers; photovoltaic power systems; robust control; taguchi methods; transient response
+382.abstr	brushless dc motors; linear motors; neurocontrollers; position control; robust control; state feedback; wavelet transforms
+383.abstr	adaptive filters; covariance matrices; filtering theory; matched filters; maximum likelihood estimation
+384.abstr	attitude control; ccd image sensors; computerised navigation; optical tracking; space vehicles
+385.abstr	actuators; adaptive estimation; aerospace simulation; aircraft control; military aircraft; probability
+386.abstr	interference (signal); magnetocardiography; matched filters; medical signal processing; obstetrics; spatial filters
+387.abstr	electroencephalography; handicapped aids; medical computing; mobile radio; visual evoked potentials
+388.abstr	electrocardiography; inverse problems; iterative methods; medical image processing; muscle
+389.abstr	autoregressive processes; bayes methods; electroencephalography; frequency-domain analysis; medical signal processing; physiological models; time series; time-domain analysis
+38.abstr	diagrams; instrumentation; process control; safety; standardisation; standards
+390.abstr	backpropagation; feedforward neural nets; medical signal detection; pneumodynamics; sleep
+391.abstr	brain models; electroencephalography; magnetoencephalography; medical signal processing; vision
+392.abstr	biocontrol; blood flow measurement; entropy; kidney; medical signal processing; time-frequency analysis; wavelet transforms
+393.abstr	computational complexity; data compression; electrocardiography; medical signal processing; minimax techniques; vector quantisation
+394.abstr	biological organs; cellular automata; digital simulation; medical computing; microorganisms; physiological models; software packages
+395.abstr	cad; capacitance; coaxial cables; coaxial waveguides; directional couplers; electric impedance; electrical engineering computing; numerical analysis; waveguide couplers
+396.abstr	circuit simulation; convolution; equivalent circuits; gallium arsenide; metal-semiconductor-metal structures; microwave photonics; millimetre wave detectors; millimetre wave mixers; photodetectors; time-domain analysis
+397.abstr	circuit simulation; integrated circuit interconnections; matrix algebra; time-domain analysis; transient analysis; transmission line theory
+398.abstr	active networks; circuit simulation; equivalent circuits; finite element analysis; microwave amplifiers; microwave circuits; nonlinear network analysis; time-domain analysis
+399.abstr	cmos memory circuits; differential amplifiers; dram chips; low-power electronics
+39.abstr	chemical technology; continuous time systems; control system synthesis; discrete event systems; finite state machines; fuzzy control; fuzzy set theory; identification; process control
+3.abstr	telecommunication
+400.abstr	cmos digital integrated circuits; computer graphic equipment; low-power electronics; microprocessor chips; mobile computing; notebook computers; random-access storage; rendering (computer graphics)
+401.abstr	cmos integrated circuits; digital-analogue conversion; high-speed integrated circuits; integrated circuit design; modulation; switching circuits
+402.abstr	cmos digital integrated circuits; detector circuits; digital phase locked loops; high-speed integrated circuits; timing circuits
+403.abstr	cmos memory circuits; flash memories; nor circuits; reference circuits; signal generators
+404.abstr	cache storage; cmos memory circuits; content-addressable storage; low-power electronics; memory architecture; vlsi
+405.abstr	horn clauses; inductive logic programming; knowledge representation; learning (artificial intelligence)
+406.abstr	network operating systems
+407.abstr	network operating systems; program compilers
+408.abstr	industrial property; meta data; network operating systems; reverse engineering; software engineering
+40.abstr	control system analysis; control system synthesis; genetic algorithms; three-term control; tuning
+410.abstr	circuit simulation; dc-dc power convertors; losses; spice; state-space methods; transfer functions; waveform analysis
+411.abstr	circuit cad; computer aided engineering; dc-dc power convertors; power engineering computing
+412.abstr	computer aided instruction; gender issues; handicapped aids; human factors; user interfaces; virtual reality
+413.abstr	educational computing; human factors; information resources; internet; user interfaces
+414.abstr	educational technology; electronic mail; human factors; social aspects of automation
+41.abstr	closed loop systems; control system analysis; feedforward; linear quadratic gaussian control; matrix algebra; nonparametric statistics; state-space methods
+4.abstr	telecommunication

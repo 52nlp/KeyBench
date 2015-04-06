@@ -313,8 +313,8 @@ class PatternMatchingExtractor(CandidateExtractorC):
             for wt in candidate.split():
               w = wt.rsplit(pre_processed_file.tag_separator(), 1)[0]
 
-#              if len(w) <= 2: # FIXME semeval trick
-#                accepted = False
+              if len(w) <= 2: # FIXME semeval trick
+                accepted = False
 
             if accepted:
               candidates.append(candidate)

@@ -16,9 +16,12 @@ if len(sys.argv) == 2:
   #-- document counts of keyphrase pairs ---------------------------------------
   keyphrase_counts = {}
   pair_counts = {}
+  nb_documents = 0.0
 
   for document in train_refs.train_references:
     document_keyphrases = []
+
+    nb_documents += 1.0
 
     for keyphrase1 in train_refs.train_references[document]:
       # keyphrase count
@@ -58,7 +61,7 @@ if len(sys.argv) == 2:
       p_k1_k2 = p_k1 * p_k2_given_k1
 
       # edge: <->
-      graph.add_edge(keyphrase1, keyphrase2, {"type": "intra", "weight": p_k1_k2})
+      graph.add_edge(keyphrase1, keyphrase2, {"type": "intra", "weight": pair_counts[keyphrase1][keyphrase2] / nb_documents})
 
   #networkx.write_dot(graph, "debug_model_intra_bi.dot")
 

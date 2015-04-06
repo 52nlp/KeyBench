@@ -58,6 +58,7 @@ from os import makedirs
 from os import path
 from os import listdir
 from topicrank_pp import TopicRankPPRanker
+from topicrank_pp import add_topicrankpp_graphs_and_models
 
 ################################################################################
 
@@ -90,21 +91,41 @@ SEMEVAL_CORPUS_TERM_SUITE_CLUSTERS = path.join(SEMEVAL_CORPUS_DIR, "term_suite_c
 SEMEVAL_CORPUS_ACABIT_TERMINOLOGY = path.join(SEMEVAL_CORPUS_DIR, "acabit_terminology")
 SEMEVAL_CORPUS_TRAIN_DOCS = path.join(SEMEVAL_CORPUS_DIR, "train")
 SEMEVAL_CORPUS_DOCS_EXTENSION = ".txt"
+SEMEVAL_CORPUS_TRAIN_GRAPH = path.join(SEMEVAL_CORPUS_DIR,
+                                       "train_model",
+                                       "model_intra_bi_occ.pickle")
+SEMEVAL_CORPUS_TRAIN_MODEL = path.join(SEMEVAL_CORPUS_DIR,
+                                       "train_model",
+                                       "model_extra.pickle")
 
 DUC_CORPUS_DIR = path.join(CORPORA_DIR, "duc_2001")
-DUC_CORPUS_DOCS = path.join(DUC_CORPUS_DIR, "documents")
-DUC_CORPUS_REFS = path.join(DUC_CORPUS_DIR, "ref")
+#DUC_CORPUS_DOCS = path.join(DUC_CORPUS_DIR, "documents")
+DUC_CORPUS_DOCS = path.join(DUC_CORPUS_DIR, "full")
+#DUC_CORPUS_REFS = path.join(DUC_CORPUS_DIR, "ref")
+DUC_CORPUS_REFS = path.join(DUC_CORPUS_DIR, "ref_full")
 DUC_CORPUS_TERM_SUITE_TERMINOLOGY = path.join(DUC_CORPUS_DIR, "term_suite_terminology")
 DUC_CORPUS_TERM_SUITE_CLUSTERS = path.join(DUC_CORPUS_DIR, "term_suite_clusters")
 DUC_CORPUS_ACABIT_TERMINOLOGY = path.join(DUC_CORPUS_DIR, "acabit_terminology")
 DUC_CORPUS_TRAIN_DOCS = path.join(DUC_CORPUS_DIR, "train")
 DUC_CORPUS_DOCS_EXTENSION = ".xml"
+DUC_CORPUS_TRAIN_GRAPH = path.join(DUC_CORPUS_DIR,
+                                   "train_model",
+                                   "model_intra_bi_occ.pickle")
+DUC_CORPUS_TRAIN_MODEL = path.join(DUC_CORPUS_DIR,
+                                   "train_model",
+                                   "model_extra.pickle")
 
 INSPEC_CORPUS_DIR = path.join(CORPORA_DIR, "inspec")
 INSPEC_CORPUS_DOCS = path.join(INSPEC_CORPUS_DIR, "documents")
-INSPEC_CORPUS_REFS = path.join(INSPEC_CORPUS_DIR, "ref")
+INSPEC_CORPUS_REFS = path.join(INSPEC_CORPUS_DIR, "ref_contr")
 INSPEC_CORPUS_TRAIN_DOCS = path.join(INSPEC_CORPUS_DIR, "train")
 INSPEC_CORPUS_DOCS_EXTENSION = ".abstr"
+INSPEC_CORPUS_TRAIN_GRAPH = path.join(INSPEC_CORPUS_DIR,
+                                      "train_model",
+                                      "model_intra_bi_occ.pickle")
+INSPEC_CORPUS_TRAIN_MODEL = path.join(INSPEC_CORPUS_DIR,
+                                      "train_model",
+                                      "model_extra.pickle")
 
 INIST_CORPUS_DIR = path.join(CORPORA_DIR, "inist")
 INIST_CORPUS_DOCS_EXTENSION = ".xml"
@@ -126,7 +147,7 @@ INIST_LINGUISTIQUE_CORPUS_REFS = path.join(INIST_CORPUS_DIR,
 INIST_LINGUISTIQUE_CORPUS_TRAIN_GRAPH = path.join(INIST_CORPUS_DIR,
                                                   "linguistique",
                                                   "train_model",
-                                                  "model_intra_bi.pickle")
+                                                  "model_intra_bi_occ.pickle")
 INIST_LINGUISTIQUE_CORPUS_TRAIN_MODEL = path.join(INIST_CORPUS_DIR,
                                                   "linguistique",
                                                   "train_model",
@@ -163,7 +184,7 @@ COMPLETERANK_ME = "completerank"
 TOPICRANK_S_ME = "topicrank_s"
 TOPICRANK_ME = "topicrank"
 KEA_ME = "kea"
-TOPICRANK_PP_ME = "topicrank_pp_train"
+TOPICRANK_PP_ME = "topicrank_pp"
 
 # candidate names
 ST_FILTERED_NGRAM_CA = "st_filtered_ngram"
@@ -194,9 +215,9 @@ TEXTRANK_SE = "textrank"
 ##### runs #####################################################################
 
 CORPORA_RU = [LINGUISTIQUE_CO]
-METHODS_RU = [TOPICRANK_PP_ME]
-NUMBERS_RU = [6]
-LENGTHS_RU = [95]
+METHODS_RU = [TOPICRANK_ME]
+NUMBERS_RU = [-1]
+LENGTHS_RU = [50]
 CANDIDATES_RU = [LONGEST_NOUN_PHRASE_CA]
 CLUSTERING_RU = [HIERARCHICAL_CLUSTER_CC]
 SCORINGS_RU = [WEIGHT_SC]
@@ -597,6 +618,32 @@ def main(argv):
                 clarit_special_patterns = english_clarit_special_patterns
                 clarit_impossible_patterns = english_clarit_impossible_patterns
                 pos_boundaries = english_pos_boundaries
+                domain_graph_filepath = SEMEVAL_CORPUS_TRAIN_GRAPH
+                domain_model_filepath = SEMEVAL_CORPUS_TRAIN_MODEL
+                domain_graph_filepath_c = path.join(path.split(SEMEVAL_CORPUS_TRAIN_GRAPH)[0],
+                                                    "c",
+                                                    path.split(SEMEVAL_CORPUS_TRAIN_GRAPH)[1])
+                domain_model_filepath_c = path.join(path.split(SEMEVAL_CORPUS_TRAIN_MODEL)[0],
+                                                    "c",
+                                                    path.split(SEMEVAL_CORPUS_TRAIN_MODEL)[1])
+                domain_graph_filepath_h = path.join(path.split(SEMEVAL_CORPUS_TRAIN_GRAPH)[0],
+                                                    "h",
+                                                    path.split(SEMEVAL_CORPUS_TRAIN_GRAPH)[1])
+                domain_model_filepath_h = path.join(path.split(SEMEVAL_CORPUS_TRAIN_MODEL)[0],
+                                                    "h",
+                                                    path.split(SEMEVAL_CORPUS_TRAIN_MODEL)[1])
+                domain_graph_filepath_i = path.join(path.split(SEMEVAL_CORPUS_TRAIN_GRAPH)[0],
+                                                    "i",
+                                                    path.split(SEMEVAL_CORPUS_TRAIN_GRAPH)[1])
+                domain_model_filepath_i = path.join(path.split(SEMEVAL_CORPUS_TRAIN_MODEL)[0],
+                                                    "i",
+                                                    path.split(SEMEVAL_CORPUS_TRAIN_MODEL)[1])
+                domain_graph_filepath_j = path.join(path.split(SEMEVAL_CORPUS_TRAIN_GRAPH)[0],
+                                                    "j",
+                                                    path.split(SEMEVAL_CORPUS_TRAIN_GRAPH)[1])
+                domain_model_filepath_j = path.join(path.split(SEMEVAL_CORPUS_TRAIN_MODEL)[0],
+                                                    "j",
+                                                    path.split(SEMEVAL_CORPUS_TRAIN_MODEL)[1])
               else:
                 if corpus == DUC_CO:
                   docs = DUC_CORPUS_DOCS
@@ -626,6 +673,8 @@ def main(argv):
                   clarit_special_patterns = english_clarit_special_patterns
                   clarit_impossible_patterns = english_clarit_impossible_patterns
                   pos_boundaries = english_pos_boundaries
+                  domain_graph_filepath = DUC_CORPUS_TRAIN_GRAPH
+                  domain_model_filepath = DUC_CORPUS_TRAIN_MODEL
                 else:
                   if corpus == INSPEC_CO:
                     docs = INSPEC_CORPUS_DOCS
@@ -652,6 +701,8 @@ def main(argv):
                     clarit_special_patterns = english_clarit_special_patterns
                     clarit_impossible_patterns = english_clarit_impossible_patterns
                     pos_boundaries = english_pos_boundaries
+                    domain_graph_filepath = INSPEC_CORPUS_TRAIN_GRAPH
+                    domain_model_filepath = INSPEC_CORPUS_TRAIN_MODEL
                   elif corpus == LINGUISTIQUE_CO:
                     docs = INIST_LINGUISTIQUE_CORPUS_DOCS
                     ext = INIST_CORPUS_DOCS_EXTENSION
@@ -882,15 +933,55 @@ def main(argv):
                                           strategy,
                                           scoring_function)
                     elif method == TOPICRANK_PP_ME:
+                      add_topicrankpp_graphs_and_models(corpus,
+                                                        domain_graph_filepath,
+                                                        domain_model_filepath,
+                                                        stemmer)
+                      if corpus == SEMEVAL_CO:
+                        add_topicrankpp_graphs_and_models("%s#C"%(corpus),
+                                                          domain_graph_filepath_c,
+                                                          domain_model_filepath_c,
+                                                          stemmer)
+                        add_topicrankpp_graphs_and_models("%s#H"%(corpus),
+                                                          domain_graph_filepath_h,
+                                                          domain_model_filepath_h,
+                                                          stemmer)
+                        add_topicrankpp_graphs_and_models("%s#I"%(corpus),
+                                                          domain_graph_filepath_i,
+                                                          domain_model_filepath_i,
+                                                          stemmer)
+                        add_topicrankpp_graphs_and_models("%s#J"%(corpus),
+                                                          domain_graph_filepath_j,
+                                                          domain_model_filepath_j,
+                                                          stemmer)
+                      if corpus == DUC_CO:
+                        train_graph_path = path.split(domain_graph_filepath)[0]
+                        train_graph_name = path.split(domain_graph_filepath)[1]
+                        train_model_path = path.split(domain_model_filepath)[0]
+                        train_model_name = path.split(domain_model_filepath)[1]
+
+                        for document_name in listdir(path.join(train_graph_path, "documents")):
+                          graph_filepath = path.join(train_graph_path, "documents", document_name, train_graph_name)
+                          model_filepath = path.join(train_model_path, "documents", document_name, train_model_name)
+                          print "%s#%s"%(corpus, document_name)
+                          print graph_filepath
+                          print model_filepath
+                          add_topicrankpp_graphs_and_models("%s#%s"%(corpus, document_name),
+                                                            graph_filepath,
+                                                            model_filepath,
+                                                            stemmer)
+
                       r = TopicRankPPRanker(run_name,
                                             LAZY_RANKING,
                                             RUNS_DIR,
                                             True,
-                                            domain_graph_filepath,
-                                            domain_model_filepath,
-                                            False,
-                                            number, # HACK: #ControlledKeyphrase
-                                            recomendation_weight=float(length)/100.0) # HACK: lambda
+                                            corpus,
+                                            False,  # use_proba
+                                            False,  # oriented
+                                            stemmer,
+                                            float("inf"))#number, # number of controlled
+                                                    # keyphrases to extract
+                                            #recomendation_weight=float(length)/100.0)
                     else:
                       if method == KEA_ME:
                         kea_train_dir = path.join(RUNS_DIR, "kea_models")

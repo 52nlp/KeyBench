@@ -269,7 +269,7 @@ class KeyphraseExtractor(object):
     """
 
     ext = self.input_extension()
-    working_pool = Pool(8)
+    working_pool = Pool(30)
     pool_args = []
     pool_results = []
     extracted_keyphrases = {}
@@ -289,7 +289,9 @@ class KeyphraseExtractor(object):
                           self.selector()))
     pool_results = working_pool.map(keyphrase_extraction_pool_worker, pool_args)
     #for args in pool_args:
+    #  print args[0]
     #  pool_results.append(keyphrase_extraction_pool_worker(args))
+    #  break
 
     ##### Evaluation of the extracted keyphrases ###############################
     for filename, keyphrases in pool_results:
